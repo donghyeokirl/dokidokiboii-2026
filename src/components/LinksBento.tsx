@@ -200,26 +200,30 @@ export const LinksBento: React.FC<LinksBentoProps> = ({
         <span className={styles.gamingOverlay} aria-hidden="true">
           <span className={styles.gamingBg} aria-hidden="true" />
         </span>
-        <StaticImage
-          draggable="false"
-          src="../images/socials/doki-wow-back.png"
-          alt={`${websiteInfo.name}`}
-          loading="eager"
-          placeholder="blurred"
-          objectFit="contain"
-          objectPosition="center bottom"
-          className={styles.gamingBack}
-        />
-        <StaticImage
-          draggable="false"
-          src="../images/socials/doki-wow-front.png"
-          alt={`${websiteInfo.name}`}
-          loading="eager"
-          placeholder="blurred"
-          objectFit="contain"
-          objectPosition="center bottom"
-          className={styles.gamingFront}
-        />
+        <span className={styles.gamingBack}>
+          <StaticImage
+            draggable="false"
+            src="../images/socials/doki-wow-back.png"
+            alt={`${websiteInfo.name}`}
+            loading="eager"
+            placeholder="blurred"
+            layout="fullWidth"
+            objectFit="contain"
+            objectPosition="center bottom"
+          />
+        </span>
+        <span className={styles.gamingFront}>
+          <StaticImage
+            draggable="false"
+            src="../images/socials/doki-wow-front.png"
+            alt={`${websiteInfo.name}`}
+            loading="eager"
+            placeholder="blurred"
+            layout="fullWidth"
+            objectFit="contain"
+            objectPosition="center bottom"
+          />
+        </span>
         <Icon
           className={styles.icon}
           width={28}

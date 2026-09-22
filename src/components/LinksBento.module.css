@@ -236,10 +236,17 @@
   height: 100%;
   pointer-events: none;
   user-select: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
   -webkit-user-drag: none;
-  user-drag: none;
+}
+
+/* Force Gatsby's own wrapper div to fill this span, regardless of the
+   source PNG's intrinsic size */
+.gamingBack :global(.gatsby-image-wrapper),
+.gamingFront :global(.gatsby-image-wrapper) {
+  position: absolute !important;
+  inset: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .gamingBack {
