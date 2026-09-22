@@ -18,7 +18,9 @@
     "gaming tiktok patreon patreon";
   gap: 8px;
   width: 100%;
+  height: 700px;
   min-height: 700px;
+  max-height: 700px;
 }
 
 .bento.live {
@@ -33,7 +35,9 @@
     "gaming instagram instagram bluesky"
     "gaming tiktok patreon patreon"
     "gaming tiktok patreon patreon";
-  min-height: 10px;
+  height: auto;
+  min-height: 1400px;
+  max-height: 1412px;
 }
 
 .card {
@@ -561,5 +565,15 @@
     grid-template-areas: none;
     grid-template-rows: auto;
     min-height: 0;
+  }
+
+  .bento {
+    height: auto;
+    max-height: 1928px;
+  }
+
+  .bento.live {
+    height: auto;
+    max-height: 2166px;
   }
 }
