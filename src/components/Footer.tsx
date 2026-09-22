@@ -14,7 +14,6 @@ export const Footer: React.FC = () => {
           <p>&copy; {year} DokiDokiBoii. All rights reserved.</p>
         </div>
         <nav aria-label="Footer">
-          <Link to="/deity-studies">Deity Studies</Link>
           {socials.slice(0, 3).map((s) => (
             <a
               key={s.name}

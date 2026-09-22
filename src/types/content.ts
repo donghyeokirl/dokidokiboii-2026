@@ -3,33 +3,6 @@ export interface VideoLink {
   url: string;
 }
 
-export interface Deity {
-  id: string;
-  slug: string;
-  group: string;
-  origin: "K-pop" | "P-pop";
-  fandomName: string;
-  note: string;
-  bio: string;
-  bannerImage: string;
-  logoImage: string;
-  cardImage: string;
-  videos: VideoLink[];
-}
-
-export interface GameItem {
-  id: string;
-  slug: string;
-  title: string;
-  status: "playing now" | "cleared" | "on the list";
-  note: string;
-  bio: string;
-  bannerImage: string;
-  logoImage: string;
-  cardImage: string;
-  videos: VideoLink[];
-}
-
 export interface EventItem {
   id: string;
   date: string;
