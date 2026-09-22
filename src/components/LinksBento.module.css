@@ -9,7 +9,7 @@
 .bento {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  grid-template-rows: repeat(5, minmax(110px, 1fr));
+  grid-template-rows: repeat(5, minmax(150px, 1fr));
   grid-template-areas:
     "twitch twitch youtube youtube"
     "twitch twitch youtube youtube"
@@ -18,9 +18,9 @@
     "gaming tiktok patreon patreon";
   gap: 8px;
   width: 100%;
-  height: 700px;
-  min-height: 700px;
-  max-height: 700px;
+  height: 800px;
+  min-height: 800px;
+  max-height: 800px;
 }
 
 .bento.live {
@@ -521,7 +521,6 @@
   }
 
   .card,
-  .twitch,
   .youtube,
   .gaming,
   .instagram,
@@ -531,7 +530,7 @@
   .kofi,
   .liveHero {
     grid-area: auto;
-    height: 230px;
+    height: 150px;
   }
 
   .gaming {
@@ -541,6 +540,7 @@
 
   .twitch {
     order: 1;
+    height: 500px;
   }
   .youtube {
     order: 2;
@@ -576,11 +576,11 @@
 
   .bento {
     height: auto;
-    max-height: 1928px;
+    max-height: 1798px;
   }
 
   .bento.live {
     height: auto;
-    max-height: 2166px;
+    max-height: 1956px;
   }
 }
