@@ -1,0 +1,157 @@
+[
+  {
+    "id": "g7",
+    "slug": "dead-by-daylight",
+    "title": "Dead by Daylight",
+    "status": "playing now",
+    "note": "Killer or survivor, chat picks the role each session.",
+    "bio": "Asymmetric 4v1 horror game developed by Behaviour Interactive, released 2016. One player takes on a Killer (drawn from an ever-growing roster of licensed horror icons — Michael Myers, Pinhead, Chucky, and more) while four Survivors try to repair generators and escape. Long-running live-service title with regular chapter updates.",
+    "bannerImage": "/images/games/dead-by-daylight/banner.png",
+    "logoImage": "/images/games/dead-by-daylight/logo.png",
+    "cardImage": "/images/games/dead-by-daylight/card.png",
+    "videos": [
+      {
+        "title": "Killer POV chaos (placeholder — swap link)",
+        "url": "https://www.youtube.com/@dokidokiboii"
+      }
+    ]
+  },
+  {
+    "id": "g8",
+    "slug": "world-of-warcraft",
+    "title": "World of Warcraft",
+    "status": "playing now",
+    "note": "Raid nights with the guild, no excuses for missing mechanics.",
+    "bio": "Blizzard Entertainment's flagship MMORPG, launched in 2004 and still receiving major expansions two decades later. Sprawling world, deep raid/dungeon content, and a guild culture that lives or dies on whether people stand out of the fire.",
+    "bannerImage": "/images/games/world-of-warcraft/banner.png",
+    "logoImage": "/images/games/world-of-warcraft/logo.png",
+    "cardImage": "/images/games/world-of-warcraft/card.png",
+    "videos": [
+      {
+        "title": "Raid night highlights (placeholder — swap link)",
+        "url": "https://www.youtube.com/@dokidokiboii"
+      }
+    ]
+  },
+  {
+    "id": "g9",
+    "slug": "league-of-legends",
+    "title": "League of Legends",
+    "status": "playing now",
+    "note": "Ranked climb, chat is banned from backseat jungling.",
+    "bio": "Riot Games' 5v5 MOBA, released in 2009 and still one of the most-played competitive games on the planet. Huge champion roster, deep meta shifts every patch, and a ranked ladder that tests patience as much as mechanics.",
+    "bannerImage": "/images/games/league-of-legends/banner.png",
+    "logoImage": "/images/games/league-of-legends/logo.png",
+    "cardImage": "/images/games/league-of-legends/card.png",
+    "videos": [
+      {
+        "title": "Ranked climb VOD (placeholder — swap link)",
+        "url": "https://www.youtube.com/@dokidokiboii"
+      }
+    ]
+  },
+  {
+    "id": "g10",
+    "slug": "marvel-rivals",
+    "title": "Marvel Rivals",
+    "status": "playing now",
+    "note": "Superhero shooter chaos, roster picks decided by chat vote.",
+    "bio": "Team-based hero shooter developed by NetEase Games in collaboration with Marvel, released December 2024 on PC, PlayStation, and Xbox. Squad-based PVP battles across a large and growing roster of Marvel heroes and villains, each with destructible, dynamic battlefields.",
+    "bannerImage": "/images/games/marvel-rivals/banner.png",
+    "logoImage": "/images/games/marvel-rivals/logo.png",
+    "cardImage": "/images/games/marvel-rivals/card.png",
+    "videos": [
+      {
+        "title": "Hero pick chaos (placeholder — swap link)",
+        "url": "https://www.youtube.com/@dokidokiboii"
+      }
+    ]
+  },
+  {
+    "id": "g11",
+    "slug": "peak",
+    "title": "PEAK",
+    "status": "playing now",
+    "note": "Co-op climb runs that end in someone eating poison mushrooms.",
+    "bio": "Co-op survival climbing game from Aggro Crab and Landfall, released June 2025. Up to four lost scouts climb a mountain to reach a rescue point, scavenging questionable food and managing stamina and injuries along the way — with a daily-rotating island layout keeping runs fresh.",
+    "bannerImage": "/images/games/peak/banner.png",
+    "logoImage": "/images/games/peak/logo.png",
+    "cardImage": "/images/games/peak/card.png",
+    "videos": [
+      {
+        "title": "Co-op climb run (placeholder — swap link)",
+        "url": "https://www.youtube.com/@dokidokiboii"
+      }
+    ]
+  },
+  {
+    "id": "g12",
+    "slug": "baldurs-gate-3",
+    "title": "Baldur's Gate 3",
+    "status": "cleared",
+    "note": "Full playthrough, romance route locked in early and never regretted.",
+    "bio": "Larian Studios' D&D-based RPG, released August 2023 to widespread critical acclaim and multiple Game of the Year awards. Deep branching narrative, turn-based combat, and a companion cast that got a full spoiler-free playthrough on stream, choices and all.",
+    "bannerImage": "/images/games/baldurs-gate-3/banner.png",
+    "logoImage": "/images/games/baldurs-gate-3/logo.png",
+    "cardImage": "/images/games/baldurs-gate-3/card.png",
+    "videos": [
+      {
+        "title": "Final act finale (placeholder — swap link)",
+        "url": "https://www.youtube.com/@dokidokiboii"
+      }
+    ]
+  },
+  {
+    "id": "g13",
+    "slug": "runescape",
+    "title": "RuneScape",
+    "status": "on the list",
+    "note": "Nostalgia pick, queued for a grind-heavy stream arc.",
+    "bio": "Jagex's long-running MMORPG, originally launched in 2001 and still active today, alongside its Old School RuneScape (OSRS) version. Famous for its skill-based progression and huge, decades-deep world. Queued up for a grind-focused streaming block.",
+    "bannerImage": "/images/games/runescape/banner.png",
+    "logoImage": "/images/games/runescape/logo.png",
+    "cardImage": "/images/games/runescape/card.png",
+    "videos": []
+  },
+  {
+    "id": "g14",
+    "slug": "visions-of-mana",
+    "title": "Visions of Mana",
+    "status": "cleared",
+    "note": "Full story clear, the soundtrack alone was worth the run.",
+    "bio": "Square Enix action RPG, released August 2024 as the first new mainline entry in the Mana series in 15 years. Follows Val as he escorts his childhood friend Hinna on her journey to the Tree of Mana, with real-time elemental combat and a switchable three-character party.",
+    "bannerImage": "/images/games/visions-of-mana/banner.png",
+    "logoImage": "/images/games/visions-of-mana/logo.png",
+    "cardImage": "/images/games/visions-of-mana/card.png",
+    "videos": [
+      {
+        "title": "Story finale reaction (placeholder — swap link)",
+        "url": "https://www.youtube.com/@dokidokiboii"
+      }
+    ]
+  },
+  {
+    "id": "g15",
+    "slug": "kingdom-hearts",
+    "title": "Kingdom Hearts",
+    "status": "on the list",
+    "note": "Queued for a full-series marathon, lore whiteboard required.",
+    "bio": "Square Enix and Disney's crossover action RPG series, launched in 2002 and spanning over a dozen entries across the Dark Seeker Saga and beyond. Notorious for its labyrinthine plot — a full marathon is queued up, whiteboard for keeping track of the lore strongly recommended.",
+    "bannerImage": "/images/games/kingdom-hearts/banner.png",
+    "logoImage": "/images/games/kingdom-hearts/logo.png",
+    "cardImage": "/images/games/kingdom-hearts/card.png",
+    "videos": []
+  },
+  {
+    "id": "g16",
+    "slug": "guild-wars",
+    "title": "Guild Wars",
+    "status": "on the list",
+    "note": "Old-school MMO pick, waiting for a slower stream week.",
+    "bio": "ArenaNet's campaign-based MMORPG series, starting in 2005 with the original Guild Wars and continuing with Guild Wars 2 (2012), still actively updated with living-world content and expansions. Known for skill-based build variety and no mandatory subscription fee.",
+    "bannerImage": "/images/games/guild-wars/banner.png",
+    "logoImage": "/images/games/guild-wars/logo.png",
+    "cardImage": "/images/games/guild-wars/card.png",
+    "videos": []
+  }
+]

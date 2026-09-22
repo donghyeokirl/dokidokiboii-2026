@@ -1,0 +1,565 @@
+.wrap {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: var(--space-2) var(--space-3) 0;
+  position: relative;
+  z-index: 2;
+}
+
+.bento {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: repeat(5, minmax(110px, 1fr));
+  grid-template-areas:
+    "twitch twitch youtube youtube"
+    "twitch twitch youtube youtube"
+    "gaming instagram instagram bluesky"
+    "gaming tiktok patreon patreon"
+    "gaming tiktok patreon patreon";
+  gap: 8px;
+  width: 100%;
+  min-height: 700px;
+}
+
+.bento.live {
+  grid-template-rows: repeat(9, minmax(110px, 1fr));
+  grid-template-areas:
+    "twitch twitch twitch twitch"
+    "twitch twitch twitch twitch"
+    "twitch twitch twitch twitch"
+    "twitch twitch twitch twitch"
+    "youtube youtube kofi kofi"
+    "youtube youtube kofi kofi"
+    "gaming instagram instagram bluesky"
+    "gaming tiktok patreon patreon"
+    "gaming tiktok patreon patreon";
+  min-height: 10px;
+}
+
+.card {
+  position: relative;
+  border-radius: 26px;
+  background: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0.02)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 0.7rem;
+  padding: var(--space-3);
+  isolation: isolate;
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 72% auto;
+  opacity: 0.12;
+  transform: scale(1);
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+  z-index: 0;
+}
+
+.card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.card:hover,
+.card:focus-visible {
+  border-color: rgba(255, 39, 136, 0.5);
+  transform: translateY(-2px);
+}
+
+.card:hover::before,
+.card:focus-visible::before {
+  opacity: 0.8;
+  transform: scale(1.08);
+}
+
+.icon {
+  margin: 0;
+  width: 2rem;
+  height: 2rem;
+  display: block;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.05em;
+  font-size: clamp(1.4rem, 1.1rem + 0.5vw, 2.1rem);
+  margin: 0;
+}
+
+.handle {
+  font-size: var(--step--1);
+  color: var(--text-muted);
+  margin: 0;
+}
+
+.twitch .handle,
+.youtube .handle,
+.gaming .handle {
+  color: var(--text);
+}
+
+.twitch {
+  grid-area: twitch;
+  background: linear-gradient(
+    135deg,
+    rgba(12, 20, 35, 0.96),
+    rgba(23, 30, 52, 0.9)
+  );
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.twitch:not(.liveHero)::before {
+  background-image: url("../clips/megaclip.gif");
+  background-position: center;
+  background-size: cover;
+  opacity: 0.28;
+  -webkit-mask-image: radial-gradient(
+    ellipse 100% 100% at top right,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0.4) 90%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  mask-image: radial-gradient(
+    ellipse 100% 100% at top right,
+    rgba(0, 0, 0, 1) 50%,
+    rgba(0, 0, 0, 0.4) 90%,
+    rgba(0, 0, 0, 0.2) 100%
+  );
+}
+
+.twitch:not(.liveHero):hover::before,
+.twitch:not(.liveHero):focus-visible::before {
+  opacity: 1;
+  transform: scale(1.06);
+}
+
+.youtube {
+  grid-area: youtube;
+  background: linear-gradient(
+    135deg,
+    rgba(12, 20, 35, 0.96),
+    rgba(23, 30, 52, 0.9)
+  );
+  border-color: rgba(255, 255, 255, 0.14);
+}
+
+.youtube::before {
+  background-image: url("../images/socials/socials-youtube.png");
+  background-position: 100% 0%;
+  background-size: 100% auto;
+}
+
+.gaming {
+  grid-area: gaming;
+  background: linear-gradient(
+    135deg,
+    rgba(16, 20, 26, 0.96),
+    rgba(24, 31, 35, 0.9)
+  );
+}
+
+.gamingCard {
+  border-width: 0;
+  background: rgba(14, 18, 22, 0.92);
+  overflow: initial;
+  position: relative;
+  z-index: 2;
+}
+
+.gamingOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+  inset: 0;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(black 60%, transparent 100%);
+  mask-image: linear-gradient(black 60%, transparent 100%);
+}
+
+.gamingBg,
+.gamingBack,
+.gamingFront {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  transition:
+    filter 0.45s ease,
+    opacity 0.45s ease,
+    left 0.8s ease,
+    right 0.8s ease,
+    transform 0.8s ease;
+}
+
+.gamingBg {
+  z-index: 0;
+  background-image: url("../images/socials/doki-wow-bg.jpg");
+  background-size: cover;
+  background-position: center 25%;
+  mix-blend-mode: overlay;
+  opacity: 0.98;
+  transform: scale(1);
+}
+
+.gamingBack,
+.gamingFront {
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+.gamingBack {
+  opacity: 0;
+  width: 85%;
+  right: 50%;
+  transform-origin: 40% 100%;
+  transform: scale(1);
+  filter: blur(5px);
+}
+
+.gamingFront {
+  width: 80%;
+  left: 35%;
+  transform-origin: 40% 100%;
+  transform: scale(1.05);
+}
+
+.gamingCard:hover .gamingBg,
+.gamingCard:focus-visible .gamingBg {
+  opacity: 0.6;
+  transform: scale(1.06);
+}
+
+.gamingCard:hover .gamingBack,
+.gamingCard:focus-visible .gamingBack {
+  opacity: 1;
+  transform: scale(1.06) translateX(30%);
+  filter: blur(0);
+}
+
+.gamingCard:hover .gamingFront,
+.gamingCard:focus-visible .gamingFront {
+  opacity: 1;
+  transform: scale(1.1) translateX(-22%);
+}
+
+.gamingCard .icon,
+.gamingCard .name,
+.gamingCard .handle {
+  position: relative;
+  z-index: 2;
+}
+
+.gamingMark {
+  width: 100%;
+  height: auto;
+  margin: -0.5rem 0;
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-drag: none;
+  user-drag: none;
+}
+
+.instagram {
+  grid-area: instagram;
+  background: linear-gradient(
+    135deg,
+    rgba(246, 142, 191, 0.86),
+    rgba(235, 166, 196, 0.8)
+  );
+  color: #1f1228;
+}
+
+.instagram .name,
+.instagram .handle,
+.instagram .icon {
+  color: #1f1228;
+}
+
+.bluesky {
+  grid-area: bluesky;
+  background: linear-gradient(
+    135deg,
+    rgba(246, 142, 191, 0.86),
+    rgba(235, 166, 196, 0.8)
+  );
+  color: #1f1228;
+}
+
+.bluesky .name,
+.bluesky .handle,
+.bluesky .icon {
+  color: #1f1228;
+}
+
+.tiktok {
+  grid-area: tiktok;
+  background: linear-gradient(
+    135deg,
+    rgba(246, 142, 191, 0.86),
+    rgba(235, 166, 196, 0.8)
+  );
+  color: #1f1228;
+}
+
+.tiktok .name,
+.tiktok .handle,
+.tiktok .icon {
+  color: #1f1228;
+}
+
+.patreon {
+  grid-area: patreon;
+  background: linear-gradient(
+    135deg,
+    rgba(246, 142, 191, 0.86),
+    rgba(235, 166, 196, 0.8)
+  );
+  color: #1f1228;
+}
+
+.patreon::before {
+  background-image: url("../images/socials/socials-patreon.png");
+  background-position: 100% 0%;
+  background-size: 100% auto;
+}
+
+.patreon .name,
+.patreon .handle,
+.patreon .icon {
+  color: #1f1228;
+}
+
+.kofi {
+  grid-area: kofi;
+  background: linear-gradient(
+    135deg,
+    rgba(246, 142, 191, 0.86),
+    rgba(235, 166, 196, 0.8)
+  );
+  color: #1f1228;
+}
+
+.kofi .name,
+.kofi .handle,
+.kofi .icon {
+  color: #1f1228;
+}
+
+.liveHero {
+  padding: 0;
+  justify-content: stretch;
+  background: linear-gradient(135deg, #0d2f2c 0%, #144c3c 36%, #184f3a 100%);
+  border-width: 0;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.twitchEmbed {
+  position: relative;
+  z-index: 20;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(20, 20, 20, 0.2),
+    rgba(0, 0, 0, 0.2)
+  );
+}
+
+.twitchEmbed iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+  background: #000;
+  position: relative;
+  z-index: 20;
+}
+
+.streamToggle {
+  position: absolute;
+  inset: auto auto 1rem 1rem;
+  z-index: 30;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(14, 18, 22, 0.82);
+  color: white;
+  border-radius: 999px;
+  padding: 0.65rem 1rem;
+  font: inherit;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.streamToggle:hover,
+.streamToggle:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.liveBadge {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.45em 0.8em;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff4b6f 0%, var(--social-yt) 100%);
+  backdrop-filter: blur(8px);
+  font-size: var(--step--1);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.liveDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+  box-shadow: 0 0 0 0 rgba(255, 93, 163, 0.5);
+  animation: livePulse 1.8s ease-in-out infinite;
+}
+
+.newTag {
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-2);
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.45em 0.8em;
+  border-radius: 999px;
+  background: var(--social-yt);
+  color: white;
+  backdrop-filter: blur(8px);
+  font-size: var(--step--1);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  animation: livePulse 1.8s ease-in-out infinite;
+}
+
+@keyframes livePulse {
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 93, 163, 0.45);
+  }
+  50% {
+    box-shadow: 0 0 0 8px transparent;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .liveDot {
+    animation: none;
+  }
+}
+
+/* --- Responsive ---
+   Below 900px the layout drops named areas for a simple order-based
+   single/double-column flow. Each card's grid-area is explicitly reset
+   to auto here — an unresolved named grid-area doesn't reliably fall
+   back to auto placement, so clearing grid-template-areas on the
+   container alone isn't enough. */
+@media (max-width: 900px) {
+  .bento,
+  .bento.live {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: auto;
+    grid-template-areas: none;
+    min-height: 0;
+  }
+
+  .card,
+  .twitch,
+  .youtube,
+  .gaming,
+  .instagram,
+  .bluesky,
+  .tiktok,
+  .patreon,
+  .kofi,
+  .liveHero {
+    grid-area: auto;
+    height: 230px;
+  }
+
+  .gaming {
+    height: 500px;
+    order: 4;
+  }
+
+  .twitch {
+    order: 1;
+  }
+  .youtube {
+    order: 2;
+  }
+  .kofi {
+    order: 3;
+  }
+  .patreon {
+    order: 5;
+  }
+  .tiktok {
+    order: 6;
+  }
+  .instagram {
+    order: 7;
+  }
+  .bluesky {
+    order: 8;
+  }
+}
+
+@media (max-width: 520px) {
+  .wrap {
+    padding: var(--space-1) var(--space-1) 0;
+  }
+  .bento,
+  .bento.live {
+    grid-template-columns: 1fr;
+    grid-template-areas: none;
+    grid-template-rows: auto;
+    min-height: 0;
+  }
+}

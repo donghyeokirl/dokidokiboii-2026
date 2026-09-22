@@ -1,0 +1,67 @@
+:root {
+  /* color */
+  /* --bg: #ff2788; */
+  --bg: #ff74b3;
+  --surface: #1e1526;
+  --surface-raised: #271b33;
+  --line: rgba(52, 18, 43, 0.26);
+  --pink: #ff74b3;
+  --pink-dim: rgba(52, 18, 43, 0.14);
+  --gold: #efa925;
+  --text: #f5edf2;
+  --social-yt: #eb1c1c;
+  --social-twitch: #9146ff;
+  --social-twitch-dark: #6c35c0;
+  --heading: #831144;
+  --text-muted: #542338;
+  --text-muted-dark: #34122b;
+  /* High-contrast accent for use directly on the vivid pink page background
+     (--pink now equals --bg, so pink-on-pink accents there are invisible —
+     use this instead for things like the hero pulse ring, wordmark accent,
+     and hover states that sit on bare page background rather than a card). */
+  --ink: #34122b;
+
+  /* splash screen (pink & clouds) — separate light palette, used only there */
+  --splash-sky-primary: #008b9f;
+  --splash-sky-secondary: #00ba82;
+  --splash-cloud: #ffffff;
+  --splash-cloud-shadow: rgba(255, 61, 116, 0.12);
+  --splash-ink: #ffd9ec;
+
+  /* type */
+  --font-display: "Outfit", "Segoe UI", sans-serif;
+  --font-body: "Open Sans", "Segoe UI", sans-serif;
+
+  /* scale: modular, ~1.25 ratio */
+  --step--1: clamp(0.83rem, 0.8rem + 0.15vw, 0.9rem);
+  --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.1rem);
+  --step-1: clamp(1.2rem, 1.1rem + 0.5vw, 1.4rem);
+  --step-2: clamp(1.5rem, 1.3rem + 1vw, 1.9rem);
+  --step-3: clamp(1.9rem, 1.6rem + 1.6vw, 2.6rem);
+  --step-4: clamp(2.4rem, 1.9rem + 2.6vw, 3.6rem);
+  --step-5: clamp(3rem, 2.2rem + 4vw, 5rem);
+
+  /* spacing */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 6.5rem;
+
+  --radius: 14px;
+  --radius-sm: 8px;
+  --max-w: 68rem;
+  --content-w: 32rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

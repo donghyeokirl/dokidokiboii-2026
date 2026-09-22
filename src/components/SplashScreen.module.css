@@ -1,0 +1,165 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(
+    110deg,
+    var(--splash-sky-primary) 0%,
+    var(--splash-sky-secondary) 45%,
+    var(--splash-sky-secondary) 55%,
+    var(--splash-sky-primary) 100%
+  );
+  cursor: pointer;
+  transition: opacity 0.5s ease;
+  opacity: 1;
+}
+
+.overlay.hide {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.content {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  animation: popIn 0.7s cubic-bezier(0.2, 0.8, 0.3, 1) both;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: translateY(14px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.wordmark {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+}
+
+.wordmark svg {
+  width: 100%;
+  max-width: unset;
+  height: 40vh;
+  animation: pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
+
+.hidingBrandmark svg {
+  animation: logoZoom 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes logoZoom {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    filter: brightness(1) blur(0);
+  }
+  30% {
+    transform: scale(1.15);
+    opacity: 1;
+    filter: brightness(1.8) blur(0);
+  }
+  60% {
+    transform: scale(2.5);
+    opacity: 1;
+    filter: brightness(3) blur(2px);
+  }
+  85% {
+    transform: scale(12);
+    opacity: 0.6;
+    filter: brightness(4) blur(6px);
+  }
+  100% {
+    transform: scale(18);
+    opacity: 0;
+    filter: brightness(5) blur(12px);
+  }
+}
+
+.skip {
+  position: absolute;
+  bottom: var(--space-4);
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: var(--step--1);
+  color: var(--splash-ink);
+  opacity: 0.6;
+  z-index: 3;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .content {
+    animation: none;
+  }
+  .particle,
+  .glitter {
+    animation: none !important;
+    filter: none !important;
+  }
+}
+
+.particle {
+  position: absolute;
+  top: var(--start-y);
+  left: var(--start-x);
+  z-index: 2;
+  border-radius: 50%;
+  width: var(--size);
+  height: var(--size);
+  opacity: var(--opacity);
+  background: var(--bg);
+  pointer-events: none;
+}
+
+.glitter {
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  z-index: 1;
+  width: var(--size);
+  height: var(--size);
+  pointer-events: none;
+  filter: blur(var(--blur));
+}
+
+.glitter :global(.gatsby-image-wrapper) {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+@keyframes glitter-twinkle {
+  0%,
+  100% {
+    opacity: 0.1;
+    transform: translate3d(var(--x), var(--y), 0) scale(0.3);
+  }
+  50% {
+    opacity: 0.95;
+    transform: translate3d(var(--x), var(--y), 0) scale(1.1);
+  }
+}

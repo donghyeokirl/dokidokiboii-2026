@@ -1,0 +1,173 @@
+.nebulaOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  mix-blend-mode: screen;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(black 60%, transparent 100%);
+  mask-image: linear-gradient(black 60%, transparent 100%);
+  z-index: 1;
+  pointer-events: none;
+}
+
+.blob {
+  position: absolute;
+  filter: blur(38px);
+  opacity: 0.2;
+  mix-blend-mode: multiply;
+  animation: blobAnimation 20s infinite alternate;
+}
+
+@keyframes blobAnimation {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  10% {
+    opacity: 0.3;
+  }
+  45% {
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(20px, -30px) scale(1.2);
+  }
+  60% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(-20px, 30px) scale(0.8);
+  }
+}
+
+.blobIndigo {
+  mix-blend-mode: normal;
+}
+
+.blobIndigo {
+  top: 8%;
+  left: 38%;
+  width: 30%;
+  height: 26%;
+  background: #5da5f7;
+  border-radius: 62% 38% 55% 45% / 45% 55% 40% 60%;
+  transform: rotate(-8deg);
+}
+.blobVioletDeep {
+  top: 4%;
+  left: 30%;
+  width: 34%;
+  height: 30%;
+  background: #5a1f9e;
+  border-radius: 40% 60% 45% 55% / 55% 45% 65% 35%;
+  transform: rotate(6deg);
+  opacity: 0.8;
+}
+.blobViolet {
+  top: -2%;
+  left: 22%;
+  width: 46%;
+  height: 38%;
+  background: #7b2fc4;
+  border-radius: 50% 50% 38% 62% / 62% 38% 55% 45%;
+  transform: rotate(-4deg);
+  opacity: 0.7;
+}
+.blobMagenta {
+  top: 34%;
+  left: 18%;
+  width: 42%;
+  height: 32%;
+  background: #c4148f;
+  border-radius: 55% 45% 60% 40% / 40% 60% 45% 55%;
+  transform: rotate(10deg);
+  opacity: 0.75;
+}
+.blobPink {
+  top: 40%;
+  left: 34%;
+  width: 40%;
+  height: 30%;
+  background: #e0299e;
+  border-radius: 45% 55% 35% 65% / 60% 40% 65% 35%;
+  transform: rotate(-6deg);
+  opacity: 0.75;
+}
+.blobBlueLeft {
+  top: 20%;
+  left: -4%;
+  width: 34%;
+  height: 34%;
+  background: #3556d6;
+  border-radius: 60% 40% 45% 55% / 50% 60% 40% 50%;
+  transform: rotate(14deg);
+  opacity: 0.8;
+}
+.blobBlueRight {
+  top: 12%;
+  left: 66%;
+  width: 30%;
+  height: 32%;
+  background: #3556d6;
+  border-radius: 42% 58% 55% 45% / 55% 45% 60% 40%;
+  transform: rotate(-18deg);
+  opacity: 0.75;
+}
+.blobLav {
+  top: 2%;
+  left: -6%;
+  width: 26%;
+  height: 40%;
+  background: #d6d3f0;
+  border-radius: 50% 50% 40% 60% / 45% 55% 50% 50%;
+  transform: rotate(20deg);
+  opacity: 0.55;
+}
+.blobPeriwinkle {
+  top: 6%;
+  left: 82%;
+  width: 28%;
+  height: 42%;
+  background: #b9b8e8;
+  border-radius: 45% 55% 60% 40% / 55% 45% 40% 60%;
+  transform: rotate(-16deg);
+  opacity: 0.55;
+}
+.blobPeriwinkle2 {
+  top: 60%;
+  left: -8%;
+  width: 24%;
+  height: 34%;
+  background: #b9b8e8;
+  border-radius: 55% 45% 40% 60% / 40% 60% 55% 45%;
+  transform: rotate(-10deg);
+  opacity: 0.45;
+}
+.blobLav2 {
+  top: 62%;
+  left: 84%;
+  width: 26%;
+  height: 36%;
+  background: #d6d3f0;
+  border-radius: 40% 60% 55% 45% / 60% 40% 45% 55%;
+  transform: rotate(12deg);
+  opacity: 0.45;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .blob {
+    animation: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .nebulaOverlay {
+    opacity: 0.1;
+    left: -10vw;
+    right: -10vw;
+  }
+}

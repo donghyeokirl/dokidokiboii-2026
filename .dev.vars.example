@@ -1,0 +1,5 @@
+# Copy this file to .dev.vars (git-ignored) for local Function testing with
+# `wrangler pages dev`. Never commit real credentials — set the real values
+# as encrypted environment variables in the Cloudflare Pages dashboard instead.
+TWITCH_CLIENT_ID=your_twitch_client_id
+TWITCH_CLIENT_SECRET=your_twitch_client_secret
