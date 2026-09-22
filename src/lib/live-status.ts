@@ -20,7 +20,7 @@ export async function fetchLiveStatus(channel: string): Promise<LiveStatus> {
       let text = (await directRes.text()).trim();
 
       // Test Out Live Request
-      text = "127";
+      // text = "127";
 
       if (text.toLowerCase().includes("offline")) {
         return { live: false, viewers: 0 };

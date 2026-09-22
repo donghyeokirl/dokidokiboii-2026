@@ -1,8 +1,6 @@
 import * as React from "react";
-import { Link } from "gatsby";
 import * as styles from "./Footer.module.css";
 import { socials } from "../data/socials";
-import Brandmark from "../images/dokidokiboii-brandmark.inline.svg";
 
 export const Footer: React.FC = () => {
   const year = new Date().getFullYear();
